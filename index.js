@@ -22,11 +22,11 @@ bleno.on('advertisingStart', function (error) {
             uuid: '2A6E',
             properties: ['read'],
             descriptors: [
-              new Descriptor({
+              new (bleno.Descriptor)({
                 uuid: '2901',
                 value: 'temp level'
               }),
-              new Descriptor({
+              new (bleno.Descriptor)({
                 uuid: '2904',
                 value: new Buffer([0x04, 0x01, 0x27, 0xAD, 0x01, 0x00, 0x00]) // maybe 12 0xC unsigned 8 bit
               })
