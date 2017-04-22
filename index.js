@@ -15,7 +15,7 @@ bleno.on('advertisingStart', function (error) {
 
   if (!error) {
     bleno.setServices([
-      new BlenoPrimaryService({
+      new (bleno.PrimaryService)({
         uuid: 'ec00',
         characteristics: [
           new (bleno.Characteristic)({
